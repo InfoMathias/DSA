@@ -20,10 +20,7 @@ class Solution:
             if node.right:        
                 dfs(node.right, count + 1, False) if left else dfs(node.right, 1, False) 
 
-        if root.left:
-            dfs(root, 0, True)
-        else: 
-            dfs(root, 0, False)
+        dfs(root, 0, True)
 
         return self.maxCount
 
